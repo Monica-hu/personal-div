@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        为了确保适当的绘制和触屏缩放，需要在head中添加 viewport 元数据标签
+        设置 user-scalable=no 禁用其缩放功能  用户只能滚动屏幕
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <!-- 设置标题前的小图标link链接 -->
+    <link rel="shortcut icon" href="img/logo.png" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 开始菜单栏(固定顶部) -->
+    <div>
+        <nav class="navbar  navbar-fixed-top navbar-inverse " id="mainnavbar">
+            <!-- 导航栏采用的是 container-fluid -->
+            <div class="container"> 
+                <div class="navbar-header  navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbody">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">
+                        <span class="glyphicon glyphicon-grain navb-logo" ></span>
+                    </a>
+                </div>
+                <div class="coll-nav collapse navbar-collapse" id="navbody">
+                    <ul class="nav navbar-nav " id="list1">
+                        <li><a href="#">MacBB</a></li>
+                        <li><a href="#">SomeKK</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                TonneyRR
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Android</a></li>
+                                <li><a href="#">GWD &</a></li>
+                                <li><a href="#">GameSalad 2D</a></li>
+                                <li><a href="#">Unity 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">JakcinnYY</a></li>
+                        <li><a href="#">MahgHH</a></li>
+                        <li><a href="javascript:;">
+                                <span class="glyphicon glyphicon-search " id="searchshow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar  navbar-fixed-top navbar-inverse " id="searchnavbar">
+            <!-- 导航栏采用的是 container-fluid -->
+            <div class="container"> 
+                <div class="navbar-header  navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbody">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">
+                        <span class="glyphicon glyphicon-grain navb-logo" ></span>
+                    </a>
+                </div>
+                <div class="coll-nav collapse navbar-collapse search-main" >
+                    <div id="searchcol">
+                        <a href="#title"  data-toggle="collapse" data-parent="#searchcol">
+                            <span class="glyphicon glyphicon-remove search-input-left" id="serchshow"></span>
+                            <input type="text" class=" search-input" placeholder="请输入搜索内容" id="searchinput">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </nav>
+    </div>
+<!-- 开始菜单栏结束 -->
+<!-- 蒙层 -->
+    <div class="bg" id="bgcover">
+            <div id="title" class="panel-collapse collapse serch-list">
+                <ul class="list-group">
+                    <li class="list-group-item">热门搜索</li>
+                    <li class="list-group-item"><a href="javascript:;">Cras justo odio</a></li>
+                    <li class="list-group-item"><a href="javascript:;">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item"><a href="javascript:;">Morbi leo risus</a></li>
+                    <li class="list-group-item"><a href="javascript:;">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item"><a href="javascript:;">Vestibulum at eros</a></li>
+                </ul>
+
+            </div>
+    </div>
+<!-- 蒙层结束 -->
+
+<!-- 轮播图开始 -->
+    <div id="carousel-example-generic" class="carousel slide" data- data-ride="carousel" data-interval="2000"  data-wrap="true" data-keyboard = "true">
+    <!-- 轮播 (carousel) 指针 -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+    <!-- 轮播项目说明   （指定要轮播的内容，图片或者视频等元素,第一个播放内容需要加入active类，保证和轮播指针的active类相对于） -->
+        <div class="carousel-inner ">
+            <div class="item active ">
+                <img src="img/02carsoule.jpg" alt="First carousel image">
+            </div>
+            <div class="item " >
+                <img src="img/03carousel.jpeg" alt="Second carousel image">
+            </div>
+            <div class="item ">
+                <img src="img/04carousel.jpg" alt="Third carousel image">
+            </div>
+            <div class="item ">
+                <img src="img/02carsoule.jpg" alt="Fourth carousel image">
+            </div>
+        </div>
+    <!-- 轮播导航说明 -->
+        <a href="#carousel-example-generic" class="left carousel-control" data-slide = "prev">
+            <span class="glyphicon glyphicon-menu-left gly-add"></span>
+        </a>
+        <a href="#carousel-example-generic" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-menu-right gly-add"></span>
+        </a>
+    </div>
+    
+<!-- 轮播图结束 -->
+
+<!-- 消息栏开始 -->
+    <div class="container">
+        <div class="row mar-top">
+            <!-- md（pc） sm（平板电脑） -->
+            <div class="col-md-4 col-sm-4 bg-col6">
+                <img src="img/left.jpb.jpeg" alt="" class="img-responsive" >                    
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <div class="panel-group" id="pan-right">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-leaf">
+                                <a href="#title1" data-toggle="collapse" data-parent="#pan-right">Osama bin Laden’s mother </a>
+                            </span>
+                        </div>
+                        <div id="title1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p>The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about her son for the first time, describing him as a “very good child” who was radicalised while studying at university.
+
+                                        In an interview with British newspaper The Guardian, Alia Ghanem said her son had been a shy and good child growing up, but he “became a different man” while studying economics at King Abdulaziz University in Jeddah.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-leaf">
+                                <a href="#title2" data-toggle="collapse" data-parent="#pan-right">university changed him </a>
+                            </span>
+                        </div>
+                        <div id="title2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about her son for the first time, describing him as a “very good child” who was radicalised while studying at university. In an interview with British newspaper The Guardian, Alia Ghanem said her son had been a shy and good child growing up, but he “became a different man” while studying economics at King Abdulaziz University in Jeddah.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-leaf">
+                                <a href="#title3" data-toggle="collapse" data-parent="#pan-right">Al Qaeda leader Osama </a>
+                            </span>
+                        </div>
+                        <div id="title3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about her son for the first time, describing him as a “very good child” who was radicalised while studying at university. In an interview with British newspaper The Guardian, Alia Ghanem said her son had been a shy and good child growing up, but he “became a different man” while studying economics at King Abdulaziz University in Jeddah.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-leaf">
+                                <a href="#title4" data-toggle="collapse" data-parent="#pan-right">Laden has spoken publicly </a>
+                            </span>
+                        </div>
+                        <div id="title4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about her son for the first time, describing him as a “very good child” who was radicalised while studying at university. In an interview with British newspaper The Guardian, Alia Ghanem said her son had been a shy and good child growing up, but he “became a different man” while studying economics at King Abdulaziz University in Jeddah.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-leaf">
+                                <a href="#title6" data-toggle="collapse" data-parent="#pan-right">a jihadist militan </a>
+                            </span>
+                        </div>
+                        <div id="title6" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about her son for the first time, describing him as a “very good child” who was radicalised while studying at university. In an interview with British newspaper The Guardian, Alia Ghanem said her son had been a shy and good child growing up, but he “became a different man” while studying economics at King Abdulaziz University in Jeddah.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-leaf">
+                                <a href="#title5" data-toggle="collapse" data-parent="#pan-right">Osama bin Laden’s mother </a>
+                            </span>
+                        </div>
+                        <div id="title5" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about her son for the first time, describing him as a “very good child” who was radicalised while studying at university. In an interview with British newspaper The Guardian, Alia Ghanem said her son had been a shy and good child growing up, but he “became a different man” while studying economics at King Abdulaziz University in Jeddah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+<!-- 消息栏结束 -->
+
+<!-- 图片开始 -->
+    <div class="container">
+        <div class="row   mar-top">
+            <div class="col-md-3 col-xs-12">
+                <img src="img/img1.jpeg" alt=""  class="img-responsive"> 
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="coursetitle"> Al Qaeda leader</div>
+                <p  class="row-p-content">he mother of the former Al Qaeda leader Osama der Osama bin Laden has spoken publicly about der Osama bin Laden has spoken publicly about</p>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <img src="img/img2.jpeg" alt=""  class="img-responsive">
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="coursetitle"> Al Qaeda leader</div>
+                <p  class="row-p-content">The mother of the former Al Qaeda leader Osama bin Laden has spoken publicly about sama bin Laden has spoken publicl</p>
+            </div>
+        </div>
+        <div class="row   mar-top">
+            <div class="col-md-3 col-xs-12">
+                <img src="img/img3.jpeg" alt=""  class="img-responsive"> 
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="coursetitle"> Al Qaeda leader</div>
+                <p  class="row-p-content">The mother of the former Al Qaeda leader Osama der Osama bin Laden has spoken publicly about der Osama bin Laden has spoken publicly about</p>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <img src="img/img1.jpeg" alt=""  class="img-responsive">
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="coursetitle"> Al Qaeda leader</div>
+                <p class="row-p-content">The mother of the former Al Qaeda leader </p>
+            </div>
+        </div>
+    </div>
+<!--图片结束  -->
+
+<!-- 底部开始 -->
+    <!-- <div class="container footer-main">
+
+    </div> -->
+<!-- 底部结束 -->
+
+<!-- 底部开始 -->
+    <div class="bottom-main">
+        <span class="bottom-content">
+            <p class="container bottom-main-content">
+                <a href="javascript:;">友情链接</a>
+                <a href="javascript:;">广告合作</a>
+                <a href="javascript:;">联系我们</a>
+                <a href="javascript:;">关于我们</a>
+                <a href="javascript:;">@UII</a>
+            </p>  
+            <p class="container bottom-main-content">
+                <a href="javascript:;">Copyright &copy; 2018 somega UIREN.NET </a>
+                <a href="javascript:;">站长统计</a>
+            </p>           
+        </span>
+    </div>
+<!-- 底部结束 -->
+<script>
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    })
+    $("#searchnavbar").hide();
+    $("#bgcover").hide();
+    $("#searchshow").click(function() {
+        $("#searchshow").hide();
+        $("#bgcover").show();
+        $("#searchnavbar").fadeIn(800,function(){
+            $("#searchnavbar").show();
+        })   
+    })
+    $("#serchshow").click(function(){
+        $("#searchshow").show();
+        $("#searchnavbar").hide();
+        $("#bgcover").hide();
+    } )
+    $("bgcover").click(function(){
+        $("#searchshow").show();
+        $("#searchnavbar").hide();
+        $("#bgcover").hide();
+    })
+</script>
+</body>
+</html>
